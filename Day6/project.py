@@ -15,7 +15,12 @@ def turn_around():
     move()
     for _ in range(2):
         turn_left()
-    
+
+# 벽이 있는 곳을 이동
+# 그렇지 않으면 가운데에서 무한 루프 돌 수 있음    
+while (front_is_clear()):
+    move()
+
 while not at_goal():
     if right_is_clear():
         turn_right()
